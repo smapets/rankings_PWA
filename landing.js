@@ -23,7 +23,6 @@ if ("serviceWorker" in navigator) {
     .register("sw.js")
     .then(registration => {
       console.log("Sw registered");
-      console.log(registration);
     })
     .catch(err => {
       console.log("Sw registration Failed");
