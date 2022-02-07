@@ -20,7 +20,7 @@ function collectFilters() {
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("sw.js")
+    .register("/rankings_PWA/sw.js", { scope: "rankings_PWA/" })
     .then(registration => {
       console.log("Sw registered");
     })
