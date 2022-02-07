@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f1f1f1" />
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      type="text/javascript"
+      src="./landing.js"
+      charset="utf-8"
+      defer
+    ></script>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./track-unsplash.png" />
+
+    <title></title>
+  </head>
+  <body class="landing-container">
+    <h1>Here you can configurate your table</h1>
+    <h2>
+      Please add columns for your table and choose the statistic you would like
+      to see to that column
+    </h2>
+    <table id="table">
+      <tbody>
+        <tr>
+          <td>
+            <p>
+              <strong>
+                Add data for first/next column of the table
+              </strong>
+            </p>
+            <div>
+              <label for="course">
+                Select one of the following categories:
+              </label>
+              <select name="column" id="course" class="select">
+                <option>Ethnicity</option>
+                <option>Name</option>
+                <option>Personal Best</option>
+                <option>Semi-Final time</option>
+                <option>Age</option>
+                <option>Final Rank</option>
+                <option>Final Time</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button type="button" class="addRow">Add another column</button><br />
+    </div>
+    <div>
+      <button type="button" class="loadTable">loadTable</button>
+    </div>
+  </body>
+</html>
