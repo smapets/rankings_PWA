@@ -1,7 +1,7 @@
 {
   "name": "rankings PWA project",
   "short_name": "rankings PWA",
-  "start_url": "./landing.html",
+  "start_url": "index.html",
   "description": "a project with VanillaJS",
   "background_color": "#ddd",
   "theme_color": "#f1f1f1",

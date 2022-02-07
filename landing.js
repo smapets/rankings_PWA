@@ -8,12 +8,14 @@ function addRow() {
   let newRow = row.cloneNode(true);
   tbody.appendChild(newRow);
 }
+//redirect the website from the table configuration
+//to the main table
 function collectFilters() {
   let filters = document.querySelectorAll("select");
   filters = Array.from(filters);
   let values = filters.map(f => f.value);
   localStorage.setItem("filters", JSON.stringify(values));
-  window.location.href = "./index.html";
+  window.location.href = "./landing.html";
 }
 
 if ("serviceWorker" in navigator) {

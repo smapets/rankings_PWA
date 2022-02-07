@@ -92,6 +92,5 @@ function storeData() {
     column.push(th.getAttribute("data-th"));
     dataToStore.push(column);
   });
-  console.log(dataToStore);
   localStorage.setItem("data", JSON.stringify(dataToStore));
 }

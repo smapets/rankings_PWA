@@ -3,57 +3,141 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f1f1f1" />
     <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       type="text/javascript"
-      src="./landing.js"
+      src="./index.js"
       charset="utf-8"
       defer
     ></script>
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="apple-touch-icon" href="./track-unsplash.png" />
 
-    <title></title>
+    <title>Scoreboard-Women's Track 100m Final</title>
   </head>
-  <body class="landing-container">
-    <h1>Here you can configurate your table</h1>
-    <h2>
-      Please add columns for your table and choose the statistic you would like
-      to see to that column
-    </h2>
-    <table id="table">
-      <tbody>
-        <tr>
-          <td>
-            <p>
-              <strong>
-                Add data for first/next column of the table
-              </strong>
-            </p>
-            <div>
-              <label for="course">
-                Select one of the following categories:
-              </label>
-              <select name="column" id="course" class="select">
-                <option>Ethnicity</option>
-                <option>Name</option>
-                <option>Personal Best</option>
-                <option>Semi-Final time</option>
-                <option>Age</option>
-                <option>Final Rank</option>
-                <option>Final Time</option>
-              </select>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div>
-      <button type="button" class="addRow">Add another column</button><br />
-    </div>
-    <div>
-      <button type="button" class="loadTable">loadTable</button>
-    </div>
+  <body>
+    <header>
+      <h1><strong>Olympic Games:Tokyo 2020</strong></h1>
+      <h1>Τελικός αγώνας στίβου 100μ. γυναικών</h1>
+      <h2>Πίνακας αγωνιζομένων και τελική κατάταξη</h2>
+    </header>
+    <main class="flex-container">
+      <aside class="img">
+        <img src="./track-unsplash.jpg" alt="track" />
+      </aside>
+      <section>
+        <button id="btn" type="button" name="button">
+          Add script: uomTrack.js
+        </button>
+        <table id="table" class="rwd-table">
+          <thead>
+            <tr>
+              <th data-th="Ethnicity">Ethnicity</th>
+              <th data-th="Name">Name</th>
+              <th data-th="Personal Best">Personal Best</th>
+              <th data-th="Semi-Final time">Semi-Final time</th>
+              <th data-th="Age">Age</th>
+              <th data-th="Final Rank">Final Rank</th>
+              <th data-th="Final Time">Final Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-th="Ethnicity">JAM</td>
+              <td data-th="Name">THOMPSON-HERAH Elaine</td>
+              <td data-th="Personal Best">10.54</td>
+              <td data-th="Semi-Final time">10.76</td>
+              <td data-th="Age">29</td>
+              <td data-th="Final Rank">1</td>
+              <td data-th="Final Time">10.61</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">SUI</td>
+              <td data-th="Name">del PONTE Ajla</td>
+              <td data-th="Personal Best">10.90</td>
+              <td data-th="Semi-Final time">11.01</td>
+              <td data-th="Age">25</td>
+              <td data-th="Final Rank">5</td>
+              <td data-th="Final Time">10.97</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">CIV</td>
+              <td data-th="Name">TA LOU Marie-Josee</td>
+              <td data-th="Personal Best">10.78</td>
+              <td data-th="Semi-Final time">10.79</td>
+              <td data-th="Age">33</td>
+              <td data-th="Final Rank">4</td>
+              <td data-th="Final Time">10.91</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">JAM</td>
+              <td data-th="Name">JACKSON Shericka</td>
+              <td data-th="Personal Best">10.76</td>
+              <td data-th="Semi-Final time">10.79</td>
+              <td data-th="Age">27</td>
+              <td data-th="Final Rank">3</td>
+              <td data-th="Final Time">10.76</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">JAM</td>
+              <td data-th="Name">FRASER-PRYCE Shelly-Ann</td>
+              <td data-th="Personal Best">10.60</td>
+              <td data-th="Semi-Final time">10.73</td>
+              <td data-th="Age">34</td>
+              <td data-th="Final Rank">2</td>
+              <td data-th="Final Time">10.74</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">SUI</td>
+              <td data-th="Name">KAMBUNDJI Mujinga</td>
+              <td data-th="Personal Best">10.94</td>
+              <td data-th="Semi-Final time">10.96</td>
+              <td data-th="Age">29</td>
+              <td data-th="Final Rank">6</td>
+              <td data-th="Final Time">10.99</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">USA</td>
+              <td data-th="Name">DANIELS Teahna</td>
+              <td data-th="Personal Best">10.83</td>
+              <td data-th="Semi-Final time">10.98</td>
+              <td data-th="Age">24</td>
+              <td data-th="Final Rank">7</td>
+              <td data-th="Final Time">11.02</td>
+            </tr>
+            <tr>
+              <td data-th="Ethnicity">GBR</td>
+              <td data-th="Name">NEITA Daryll</td>
+              <td data-th="Personal Best">10.93</td>
+              <td data-th="Semi-Final time">11.00</td>
+              <td data-th="Age">25</td>
+              <td data-th="Final Rank">8</td>
+              <td data-th="Final Time">11.12</td>
+            </tr>
+          </tbody>
+          <tfoot valign="center">
+            <tr>
+              <td colspan="7"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <aside class="img">
+        <img src="./medals-unsplash.jpg" alt="medals" />
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        &larr; Drag window (in editor or full page view) to see the effect.
+        &rarr;
+      </p>
+    </footer>
   </body>
 </html>
